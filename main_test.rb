@@ -19,7 +19,7 @@ class TestMain < Minitest::Test
   def test_that_valid_url_extractes_the_top_25_used_words_with_counts
     ARGV[0] = 'https://www.ruby-lang.org/en/'
     expected = <<~EOS
-      ruby: 35
+      ruby: 34
       a: 15
       by: 11
       on: 11
@@ -41,9 +41,9 @@ class TestMain < Minitest::Test
       about: 4
       continue: 4
       preview: 4
-      quot: 4
       reading: 4
       world: 4
+      announce: 3
     EOS
     assert_output(expected) { load 'main.rb' }
   end
