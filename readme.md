@@ -31,3 +31,11 @@ rake test
 ```
 
 The tests in [main_test.rb](main_test.rb) cover various scenarios, including no arguments, invalid URLs, unreachable URLs, and a valid URL.
+
+## Assumptions Made/Notes
+
+I leaned towards simplicity and ended up just using a single script to do all of the work. With more time I would've setup a web scraping class that would be easier to test. I believe the tests I wrote with minitest cover all of the test cases.
+
+I am more familiar testing with RSpec, but opted for minitest since it's included with Ruby.
+
+I am also more familiar with using Ruby as a part of Ruby on Rails as opposed to creating CLI tools.
