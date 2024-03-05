@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 def get_html(url)
-  Nokogiri::HTML(open(url))
+  Nokogiri::HTML(URI.open(url))
 end
 
 def get_body(url)
