@@ -50,12 +50,16 @@ end
 
 url = ARGV[0]
 
-return puts "Expected a valid URL to be passed as an argument." if invalid_request(url)
+if invalid_request(url)
+  puts "Expected a valid URL to be passed as an argument."
+  return
+end
 
 html = begin
   get_body(url)
 rescue
-  return puts "Unable to reach '#{url}'. Please try again later."
+  puts "Unable to reach '#{url}'. Please try again later."
+  return
 end
 
 remove_non_text_elements(html)
